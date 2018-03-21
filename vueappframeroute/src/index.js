@@ -99,6 +99,8 @@ const router = new VueRouter({
     }]
 })
 
+
+//后期想修改成，使用vuerouter 只不过组件动态加载 去掉自定义的irouter
 router.beforeEach((to, from, next) => {
     let comp = Vue.prototype.$allcomponent.find(c => c.path == to.path)
     if (comp) {
